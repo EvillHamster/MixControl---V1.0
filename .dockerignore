@@ -1,0 +1,14 @@
+node_modules
+.git
+.postgres
+.env
+dist
+*.log
+
+backups
+artifacts
+
+.env.*
+*.dump
+*.backup
+*.bak

@@ -1,0 +1,152 @@
+.mixture-picker {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+  color: #526079;
+}
+.mixture-picker-trigger {
+  border: 1px solid #d9e1ec;
+  border-radius: 7px;
+  padding: 9px 11px;
+  background: white;
+  min-height: 40px;
+  max-width: 100%;
+  color: #243754;
+  font: inherit;
+}
+.mixture-picker {
+  position: relative;
+  flex: 0 1 300px;
+  min-width: 180px;
+}
+.mixture-picker-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+.mixture-picker-trigger > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mixture-picker-trigger svg {
+  flex-shrink: 0;
+}
+.mixture-picker-popup {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  width: 100%;
+  min-width: 240px;
+  max-width: calc(100vw - 56px);
+  z-index: 30;
+  padding: 7px;
+  background: #fff;
+  border: 1px solid #dce5f1;
+  border-radius: 9px;
+  box-shadow: 0 8px 25px #223a581a;
+}
+.mixture-picker-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0 9px;
+  margin-bottom: 6px;
+}
+.mixture-picker-search input {
+  min-width: 0;
+  width: 100%;
+  min-height: 35px;
+  border: 0;
+  outline: none;
+  padding: 6px 0;
+}
+.mixture-picker-popup [role="listbox"] {
+  max-height: 240px;
+  overflow: auto;
+}
+.mixture-picker-popup [role="option"] {
+  display: block;
+  width: 100%;
+  min-height: 36px;
+  padding: 9px 10px;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #3c4e67;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.mixture-picker-popup [role="option"]:hover,
+.mixture-picker-popup [role="option"].focused {
+  background: #f1f6fe;
+}
+.mixture-picker-popup [role="option"][aria-selected="true"] {
+  background: #eaf2ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+.mixture-picker-popup p {
+  font-size: 12px;
+  color: #7c899c;
+  padding: 9px;
+}
+
+.mixture-picker > span {
+  font-size: 12px;
+  color: #526079;
+}
+.mixture-picker-trigger {
+  border: 1px solid #d9e1ec;
+  border-radius: 7px;
+  padding: 9px 11px;
+  background: white;
+  min-height: 40px;
+  color: #243754;
+  font: inherit;
+}
+.mixture-picker-trigger:focus-visible {
+  outline: none;
+  border-color: #8da8ce;
+  box-shadow: 0 0 0 2px #dbe7f366;
+}
+.mixture-picker-search:focus-within {
+  border-color: #9db4d2;
+  box-shadow: 0 0 0 1px #e7eef7;
+}
+.mixture-picker .mixture-picker-search input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+.mixture-picker .mixture-picker-search input {
+  background: transparent;
+  border-radius: 0;
+}
+.mixture-picker-compact {
+  flex: 0 1 190px;
+  min-width: 130px;
+  gap: 0;
+  font-size: 12px;
+}
+.mixture-picker-compact .mixture-picker-trigger {
+  height: 35px;
+  min-height: 35px;
+  font-size: 12px;
+}
+.mixture-picker-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
