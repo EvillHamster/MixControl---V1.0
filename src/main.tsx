@@ -1365,28 +1365,24 @@ function RecordForm({
                     : "Ровно 7 цифр, включая ведущие нули"}
           </small>
         </label>
-        <label className="span-2">
-          Смесь <span className="required">*</span>
-          <select
+        <div className="span-2">
+          <MixturePicker
             disabled={foreignRecord}
             required
+            allowAll={false}
             value={mixtureId}
-            onChange={(e) => setMixtureId(e.target.value)}
-          >
-            <option value="">Выберите смесь</option>
-            {mixtures
+            onChange={setMixtureId}
+            catalog={mixtures
               .filter((m) => !m.archived || m.id === record?.mixtureId)
-              .map((m) => (
-                <option key={m.id} value={m.id}>
-                  {m.name}
-                  {m.archived ? " (архив)" : ""}
-                </option>
-              ))}
-          </select>
+              .map((m) => ({
+                id: m.id,
+                name: m.name + (m.archived ? " (архив)" : ""),
+              }))}
+          />
           {!mixtures.some((m) => !m.archived) && !record && (
             <small>Сначала добавьте смесь в раздел «База смесей».</small>
           )}
-        </label>
+        </div>
       </div>
       {canManage && (
         <div className="norm-preview">
